@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="dist/output.css" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
     <title>Reka wijaya</title>
   </head>
-  <body>
+  <body id="body">
     <!-- header start -->
     <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
       <div class="container">
@@ -22,24 +23,18 @@
               <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
             </button>
             <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full  lg:shadow-none lg:rounded-none">
-              <ul class="blok lg:flex">
+              <ul id="navbar" class="blok lg:flex">
                 <li class="group">
-                  <a href="#home" class="text-base text-slate-900 py-2 mx-8 flex group-hover:text-primary">Home</a>
+                  <a href="#home" class="text-base  py-2 mx-8 flex group-hover:text-primary">Home</a>
                 </li>
                 <li class="group">
-                  <a href="#about" class="text-base text-slate-900 py-2 mx-8 flex group-hover:text-primary">About me</a>
+                  <a href="#about" class="text-base py-2 mx-8 flex group-hover:text-primary">About me</a>
                 </li>
                 <li class="group">
-                  <a href="#portfolio" class="text-base text-slate-900 py-2 mx-8 flex group-hover:text-primary">Portfolio</a>
+                  <a href="#portfolio" class="text-base py-2 mx-8 flex group-hover:text-primary">Portfolio</a>
                 </li>
-                <!-- <li class="group">
-                  <a href="#clients" class="text-base text-slate-900 py-2 mx-8 flex group-hover:text-primary">Client</a>
-                </li> -->
-                <!-- <li class="group">
-                  <a href="#blog" class="text-base text-slate-900 py-2 mx-8 flex group-hover:text-primary">Blog</a>
-                </li> -->
                 <li class="group">
-                  <a href="#kontak" class="text-base text-slate-900 py-2 mx-8 flex group-hover:text-primary">contact</a>
+                  <a href="#kontak" class="text-base py-2 mx-8 flex group-hover:text-primary">Social media</a>
                 </li>
               </ul>
             </nav>
@@ -53,17 +48,25 @@
     <!-- hero section start -->
     <section id="home" class="pt-36">
       <div class="container">
+        <button id="moon" onclick="buttonNight()">
+          <i data-feather="moon"></i>
+          <h4 class="font-bold">Night</h4>
+        </button>
+        <button onclick="buttonSun()" >
+          <i id="sun" class="text-white" data-feather="sun"></i>
+          <h4 class="text-white font-bold">Light</h4>
+        </button>
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2">
             <h1 class="text-base font-semibold text-primary md:text-xl">
               Hello everyone 👋, I'm
-              <span
+              <span id="name"
                 class="block font- bold text-slate-900 text-4xl nt-1 lg:text-5xl"
                 >Reka Wijaya</span
               >
             </h1>
             <h2 class="font-medium text-slate-500 text-lg mb-5 lg:text-2xl pt-2">
-              <span class="text-slate-900">Fullstack web developer
+              <span id="tag" class="text-slate-900">Fullstack web developer
             </h2>
             <p class="text-slate-500 mb-10 leading-relaxed">
               Becoming a web developer is enjoyable, isn't it?
@@ -72,8 +75,7 @@
             <a
               href="https://wa.me/6289651660708" target="_hallo reka"
               class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
-              >Contact Me</a
-            >
+              >Contact Me</a>
           </div>
           <div class="w-full self-end px-4 lg:w-1/2">
             <div class="relative mt-36 lg:mt-9 lg:right-0">
@@ -106,48 +108,47 @@
     <!-- hero section end -->
 
      <!-- client start -->
-     <section id="clients" class=" pt-36 pb-32 bg-slate-700">
+     <section id="skils" class="pt-36 my-10 pb-32">
       <div class="container">
         <div class="w-full">
           <div class="mx-auto text-center mb-16">
-            <h4 class="text-semibold text-3xl text-primary mb-2 py-5">About Me</h4>
             <p class="font-medium text-md text-slate-500 md:text-lg">I am Reka Wijaya, a dedicated Fullstack Web Developer with specialized proficiency in JavaScript programming. I hold a steadfast belief in the transformative power of technology, and my commitment lies in contributing through the creation of innovative and functional code.</p>
           </div>
         </div>
         <div class="w-full px-4">
           <div class="flex flex-wrap items-center justify-center">
             <a href="#"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-200 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-              <img src="/portfolio/dist/img/client/JavaScript-logo.png" alt="pertamina">
+              <img src="/portfolio/dist/img/client/JavaScript-logo.png" alt="javascript">
             </a>
-            <a href="#"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-200 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-              <img src="/portfolio//dist/img/client/1611079.png" alt="walmart">
+            <a href="https://react.dev/"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-200 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+              <img src="/portfolio//dist/img/client/1611079.png" alt="react.js">
             </a>
-            <a href="#"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-200 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-              <img src="/portfolio/dist/img/client/2560px-Node.js_logo.svg.png" alt="bumn">
+            <a href="https://nodejs.org/en"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-200 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+              <img src="/portfolio/dist/img/client/2560px-Node.js_logo.svg.png" alt="nodejs">
             </a>
-            <a href="#"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-200 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-              <img src="/portfolio/dist/img/client/express-js.png" alt="mayapada">
+            <a href="https://expressjs.com/"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-200 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+              <img src="/portfolio/dist/img/client/express-js.png" alt="express">
             </a>
-            <a href="#"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-200 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-              <img src="/portfolio/dist/img/client/bootstrap-5-logo-icon.webp" alt="shopee">
+            <a href="https://getbootstrap.com/"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-200 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+              <img src="/portfolio/dist/img/client/bootstrap-5-logo-icon.webp" alt="bootstrap">
             </a>
-            <a href="#"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-200 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-              <img src="/portfolio/dist/img/client/pgnew.png" alt="shopee">
+            <a href="https://www.postgresql.org/"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-200 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+              <img src="/portfolio/dist/img/client/pgnew.png" alt="pg">
             </a>
-            <a href="#"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-              <img src="/portfolio/dist/img/client/free-html5-40-1175193.webp" alt="alibaba">
+            <a href="https://id.wikipedia.org/wiki/HTML5"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+              <img src="/portfolio/dist/img/client/free-html5-40-1175193.webp" alt="html-logo">
             </a>
-            <a href="#"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-              <img src="/portfolio/dist/img/client/css.svg" alt="alibaba">
+            <a href="https://en.wikipedia.org/wiki/CSS"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+              <img src="/portfolio/dist/img/client/css.svg" alt="css3-logo">
             </a>
-            <a href="#"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-              <img src="/portfolio/dist/img/client/Tailwind_CSS_Logo.svg.png" alt="alibaba">
+            <a href="https://tailwindcss.com/"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+              <img src="/portfolio/dist/img/client/Tailwind_CSS_Logo.svg.png" alt="tailwind-logo">
             </a>
-            <a href="#"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-              <img src="/portfolio/dist/img/client/3.png" alt="alibaba">
+            <a href="https://git-scm.com/downloads"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+              <img src="/portfolio/dist/img/client/3.png" alt="gitbash">
             </a>
-            <a href="#"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-              <img src="/portfolio/dist/img/client/Github_icon-icons.com_67091.png" alt="alibaba">
+            <a href="https://github.com/"class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+              <img src="/portfolio/dist/img/client/Github_icon-icons.com_67091.png" alt="github">
             </a>
           </div>
         </div>
@@ -156,12 +157,12 @@
     <!-- client end -->
 
     <!-- portfolio star -->
-    <section id="portfolio" class="pt-36 pb-16 bg-slate-100">
+    <section id="portfolio" class="pt-36 pb-16">
       <div class="container">
         <div class="w-ful px4">
           <div class="max-w-xl mx-auto text-center mb-16">
             <h4 class="text-semibold text-3xl text-primary mb-2 ">Portfolio</h4>
-            <h2 class="font-bold text-slate-900 text-2xl mb-4 sm:text-2xl lg:text-3xl">Welcome to My Project Portfolio! 🚀</h2>
+            <h2 id="tag4" class="font-bold text-slate-900 text-2xl mb-4 sm:text-2xl lg:text-3xl">Welcome to My Project Portfolio! 🚀</h2>
             <p class="font-medium text-md text-slate-500 md:text-lg">I'm thrilled to share my latest works in the world of web development. Each project is a manifestation of dedication, creativity, and the technical skills I bring to every challenge. Let's explore together and discover how each project reflects my vision and commitment to developing innovative solutions.</p>
           </div>
         </div>
@@ -173,7 +174,7 @@
               width="w-full">
             </a>
             </div>
-            <h3 class="font-semibold text-xl text-slate-900 mt-5 mb-3">Traveler's Social Media Platform: Explore, Connect, Wanderlust 🌍</h3>
+            <h3 id="tag5" class="font-semibold text-xl text-slate-900 mt-5 mb-3">Traveler's Social Media Platform: Explore, Connect, Wanderlust 🌍</h3>
             <p class="font-medium text-base text-slate-500">Embark on a journey of exploration and shared adventures with our groundbreaking Traveler's Social Media Platform. Designed with a passion for wanderlust, this project is crafted to cater specifically to the global community of travel enthusiasts</p>
           </div>
           <div class="mb-12 p-4 md:w-1/2">
@@ -183,7 +184,7 @@
               width="w-full">
             </a>
             </div>
-            <h3 class="font-semibold text-xl text-slate-900 mt-5 mb-3">EverGlow: Men's Skincare Haven</h3>
+            <h3 id="tag6" class="font-semibold text-xl text-slate-900 mt-5 mb-3">EverGlow: Men's Skincare Haven</h3>
             <p class="font-medium text-base text-slate-500">EverGlow, an e-commerce project specializing in the sale of men's skincare products, offers a unique shopping experience for men who care about the health and appearance of their skin.</p>
           </div>
           <div class="mb-12 p-4 md:w-1/2">
@@ -193,7 +194,7 @@
               width="w-full">
             </a>
             </div>
-            <h3 class="font-semibold text-xl text-slate-900 mt-5 mb-3">Movie List Project: Curate Your Cinematic Experience 🎬</h3>
+            <h3 id="tag7" class="font-semibold text-xl text-slate-900 mt-5 mb-3">Movie List Project: Curate Your Cinematic Experience 🎬</h3>
             <p class="font-medium text-base text-slate-500">The Movie List project is a curated platform designed for cinephiles and movie enthusiasts to explore, discover, and organize their cinematic journey</p>
           </div>
         </div>
@@ -289,10 +290,12 @@
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full px-4 mb-10 lg:w-1/2">
-            <h4 class="font-bold uppercase text-primary text-lg mb-3">
-              Education
-            </h4>
-            <h2 class="font-bold text-slate-900 text-3xl mb-5 max-w-md lg:text-4xl">
+            <div class="flex">
+              <a href="https://www.binaracademy.com/">
+              <img src="/portfolio/dist/img/client/62c572795b1ce33784125833_minimal-logo-binar-academy.svg" alt="binar-academy-logo">
+            </a>
+            </div>
+            <h2 id="tag2" class="font-bold text-slate-900 text-3xl mb-5 max-w-md lg:text-4xl">
               Experience at Binar Academy Fullstack Web Development Bootcamp 🚀
             </h2>
             <p class="font-medium text-base text-slate-500 max-w-xl lg:text-lg">
@@ -323,17 +326,25 @@
             </p>
           </div>
           <div class="w-full px-4 lg:w-1/2">
-            <h3 class="font-semibold text-slate-900 text-2xl mb-4 lg:text-3xl lg:pt-10">
-              mari kerja sama!
-            </h3>
+            <img src="/portfolio/dist/img/client/JavaScript frameworks-pana 1.png" alt="">
+            <h2 id="tag3" class="font-bold text-slate-900 text-3xl mb-5 max-w-md lg:text-4xl">
+              Transforming Challenges into Code Victories 🚀
+            </h2>
             <p class="font-medium text-base text-slate-500 lg:text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-              fuga nulla, quia magnam temporibus blanditiis tempora.
+              I am a Fullstack Web Developer with a high passion for tackling coding challenges. My interest goes beyond mere code-writing; I thrive on delving deep into creative problem-solving exploration. I take pride and satisfaction in successfully solving complex issues or bugs, and this serves as the primary motivation in my web development journey.
             </p>
-            <div class="flex items-center py-6">
+            <h4 class="text-2xl text-slate-500 font-bold mt-4">Unique Value Proposition:</h4>
+            <p class="font-medium text-base text-slate-500 lg:text-lg">
+              My strength lies in my ability to seamlessly integrate front-end and back-end expertise. I take pleasure in exploring various cutting-edge technologies and consistently seek ways to enhance efficiency and security in web development.
+            </p>
+            <h4 id="kontak" class="text-2xl text-slate-500 font-bold mt-4">Portofolio:</h4>
+            <p class="font-medium text-base text-slate-500 lg:text-lg">
+              In my portfolio, you will discover a variety of projects that showcase my expertise in building responsive and functional web applications. Each project serves not only as a showcase of technical skills but also as evidence of my dedication to quality and innovation.
+            </p>
+            <div id="tag8" class="flex items-center py-6">
               <!-- youtube -->
               <a
-                href="#"
+                href="https://m.youtube.com/channel/UCRIEAciYAUvSkJU-uHt8QrA?fbclid=PAAabNRkcUFdvaODQkgu4tUZH5LOFefl_498X9O_o2ZR2lqQrxZBgdwlerYJk"
                 target="_blank"
                 class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-400 hover:border-primary hover:bg-primary hover:text-white"
               >
@@ -352,7 +363,7 @@
               </a>
               <!-- instagram -->
               <a
-                href="#"
+                href="https://www.instagram.com/rekaawij?utm_source=qr&igsh=bDZxeDUxdHozc2o2"
                 target="_blank"
                 class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-400 hover:border-primary hover:bg-primary hover:text-white"
                 ><svg
@@ -377,19 +388,13 @@
                   </a>
                 <!-- watsapp -->
                 <a
-                  href="#"
+                  href="https://wa.me/6289651660708"
                   target="_blank"
                   class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-400 hover:border-primary hover:bg-primary hover:text-white"
                   ><svg role="img" viewBox="0 0 24 24" width="30"
                   class="fill-current"  
                   xmlns="http://www.w3.org/2000/svg"><title>WhatsApp</title><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                   </a>
-                <a
-                href="#"
-                target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-400 hover:border-primary hover:bg-primary hover:text-white"
-                ><svg role="img" viewBox="0 0 24 24" width="30" class="fill-curent" xmlns="http://www.w3.org/2000/svg"><title>TikTok</title><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-                </a>
             </div>
           </div>
         </div>
@@ -402,27 +407,25 @@
       <div class="container">
       <div class="flex flex-wrap">
         <div class="w-full px-4 mb-12 md:w-1/3 lg:mx-auto">
-          <h2 class="font-bold text-4xl text-white mb-3">Rexart</h2>
+          <h2 class="font-bold text-4xl text-white mb-3">RekaWijaya</h2>
           <h3 class="font-semibold text-lg text-primary mb-4">wijayareka02@gmail.com</h3>
           <p class="font-base text-md text-primary italic mb-2">jl. bekisar blok BB3 no 10</p>
           <p class="font-semibold text-lg text-primary">Bekasi</p>
         </div>
         <div class="w-full px-4 mb-12 md:w-1/3">
-          <h3 class="font-bold text-2xl text-white mb-3">Kategori Tulisan</h3>
           <ul>
             <li class="mb-2">
-              <a href="#" class="font-semibold text-lg text-white hover:text-primary transition duration-500">web developer</a>
+              <a href="#" class="font-semibold text-lg text-white hover:text-primary transition duration-500">Fullstack web developer</a>
             </li>
             <li class="mb-2">
-              <a href="#" class="font-semibold text-lg text-white hover:text-primary transition duration-500">Bisnis Digital</a>
+              <a href="#about" class="font-semibold text-lg text-white hover:text-primary transition duration-500">Binar Academy</a>
             </li>
             <li>
-              <a href="#" class="font-semibold text-lg text-white hover:text-primary transition duration-500">Sistem informasi</a>
+              <a href="#skils" class="font-semibold text-lg text-white hover:text-primary transition duration-500">Skils</a>
             </li>
           </ul>
         </div>
         <div class="w-full px-4 md:w-1/3">
-          <h3 class="font-bold text-2xl text-white mb-3">Tautan</h3>
           <div class="flex flex-wrap">
         <div class="container">
           <ul>
@@ -442,7 +445,7 @@
               <a href="#blog" class="font-semibold text-lg text-white hover:text-primary transition duration-500">Blog</a>
             </li> -->
             <li class="mb-2">
-              <a href="#kontak" class="font-semibold text-lg text-white hover:text-primary transition duration-500">Contact</a>
+              <a href="#kontak" class="font-semibold text-lg text-white hover:text-primary transition duration-500">social media</a>
             </li>
           </ul>
         </div>
@@ -452,12 +455,15 @@
       </div>
       <div class="w-full px-4 py-4">
       <div class="container">
-        <h4 class="font-base text-md text-slate-500 text-center">Copyright 2023 <span class="font-semibold italic text-lg text-primary ">rekaawij </span>| All Right Reserved</h4>
+        <h4 class="font-base text-md text-slate-500 text-center">Copyright © 2024 <span class="font-semibold italic text-lg text-primary ">Rekawijaya </span>| All Right Reserved</h4>
       </div>
     </div>
     </footer>
     <!-- footer end -->
 
     <script src="dist/js/script.js"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
