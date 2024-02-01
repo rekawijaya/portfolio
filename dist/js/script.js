@@ -27,7 +27,7 @@ document.addEventListener('click', function(e){
 
 const body = document.querySelector("#body")
 const navbar = document.querySelector("#navbar")
-const name = document.querySelector("#name")
+const name1 = document.querySelector("#name")
 const tag = document.querySelector("#tag")
 const tag2 = document.querySelector("#tag2")
 const tag3 = document.querySelector("#tag3")
@@ -41,7 +41,7 @@ const moon = document.querySelector("#moon")
 const buttonNight = () => {
   body.classList.add("bg-slate-700")
   navbar.classList.add("text-white")
-  name.classList.add("text-white")
+  name1.classList.add("text-white")
   tag.classList.add("text-white")
   tag2.classList.add("text-white")
   tag3.classList.add("text-white")
@@ -51,13 +51,15 @@ const buttonNight = () => {
   tag7.classList.add("text-white")
   tag8.classList.add("text-white")
   moon.classList.add("hidden")
-  sun.classList.add("visible text-white")
+  sun.classList.add("visible")
+  navmenu.classList.remove("bg-white")
+  navmenu.classList.add("bg-slate-700")
 }
 
 const buttonSun = () => {
   body.classList.remove("bg-slate-700")
   navbar.classList.remove("text-white")
-  name.classList.remove("text-white")
+  name1.classList.remove("text-white")
   tag.classList.remove("text-white")
   tag2.classList.remove("text-white")
   tag3.classList.remove("text-white")
@@ -67,5 +69,7 @@ const buttonSun = () => {
   tag7.classList.remove("text-white")
   tag8.classList.remove("text-white")
   moon.classList.remove("hidden")
-  sun.classList.remove("visible text-white")
+  sun.classList.remove("visible")
+  navmenu.classList.remove("bg-slate-700")
+  navmenu.classList.add("bg-white")
 }
